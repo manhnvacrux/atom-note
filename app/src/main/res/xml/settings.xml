@@ -82,18 +82,8 @@
 
         <Preference
             app:iconSpaceReserved="false"
-            app:key="@string/githubKey"
-            app:title="@string/github" />
-
-        <Preference
-            app:iconSpaceReserved="false"
-            app:key="@string/librariesKey"
-            app:title="@string/libraries" />
-
-        <Preference
-            app:iconSpaceReserved="false"
-            app:key="@string/rateKey"
-            app:title="@string/rate" />
+            app:key="@string/about"
+            app:title="@string/about" />
 
     </PreferenceCategory>
 </PreferenceScreen>

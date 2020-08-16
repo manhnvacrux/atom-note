@@ -41,8 +41,6 @@ class Settings : PreferenceFragmentCompat() {
         val importNotesPref: Preference? = findPreference(mContext.getString(R.string.importNotesFromAFileKey))
 
         val ratePref: Preference? = findPreference(mContext.getString(R.string.rateKey))
-        val githubPref: Preference? = findPreference(mContext.getString(R.string.githubKey))
-        val librariesPref: Preference? = findPreference(mContext.getString(R.string.librariesKey))
 
         exportNotesPref?.setOnPreferenceClickListener {
             exportHelper.exportBackup()
@@ -59,30 +57,8 @@ class Settings : PreferenceFragmentCompat() {
             return@setOnPreferenceClickListener true
         }
 
-        githubPref?.setOnPreferenceClickListener {
-            openLink(Github)
-            return@setOnPreferenceClickListener true
-        }
 
-        ratePref?.setOnPreferenceClickListener {
-            openLink(PlayStore)
-            return@setOnPreferenceClickListener true
-        }
 
-        librariesPref?.setOnPreferenceClickListener {
-            val libraries = arrayOf("Pretty Time", "Material Components for Android")
-            val builder = MaterialAlertDialogBuilder(mContext)
-            builder.setTitle(R.string.libraries)
-            builder.setItems(libraries) { dialog, which ->
-                when (which) {
-                    0 -> openLink(PrettyTime)
-                    2 -> openLink(MaterialComponents)
-                }
-            }
-            builder.setNegativeButton(R.string.cancel, null)
-            builder.show()
-            return@setOnPreferenceClickListener true
-        }
 
         maxItemsPref?.setOnPreferenceChangeListener { preference, newValue ->
             return@setOnPreferenceChangeListener newValue.toString().isNotEmpty()
@@ -132,8 +108,6 @@ class Settings : PreferenceFragmentCompat() {
     }
 
     companion object {
-        private const val Github = "https://github.com/OmGodse/AtomNote"
-        private const val PlayStore = "https://play.google.com/store/apps/details?id=tech.acruxsolutions.atomenote"
         private const val PrettyTime = "https://github.com/ocpsoft/prettytime"
         private const val MaterialComponents = "https://github.com/material-components/material-components-android"
     }
