@@ -6,7 +6,7 @@
     android:clickable="true"
     android:ellipsize="end"
     android:focusable="true"
-    android:fontFamily="@font/nunito_semibold"
+    android:fontFamily="@font/roboto_semibold"
     android:background="?attr/selectableItemBackground"
     android:maxLines="1"
     android:padding="16dp"

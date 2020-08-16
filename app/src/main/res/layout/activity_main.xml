@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/search_bar"
-                    android:fontFamily="@font/nunito_regular"
+                    android:fontFamily="@font/roboto_regular"
                     android:hint="@string/search"
                     android:imeOptions="actionDone"
                     android:paddingStart="16dp"

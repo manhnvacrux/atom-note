@@ -55,5 +55,9 @@
         <activity
             android:name="tech.acruxsolutions.atomnote.activities.TakeNote"
             android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 </manifest>
